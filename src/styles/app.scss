@@ -1,40 +1,3 @@
-/*
-  BEM (global)
-
-  helpers
-    index (for order)
-
-    variables
-    mixins (use variables)
-
-  layout
-    index (for order)
-
-    normalize (npm)
-    reset (npm)
-
-    my-reset (use helpers)
-    
-    base (use helpers)
-  
-  libs
-    index (for order)
-    
-    swiper (npm)
-    select2 (npm)
-    ...
-  
-  content
-    index (for order)
-
-    utils
-      ...
-    components (use helpers)
-      ...
-    pages (use helpers)
-      ...
-*/
-
 @import "./fonts.scss";
 
 @import "./helpers/index.scss";
@@ -45,13 +8,4 @@
 
 @import "./content/index.scss";
 
-@import './helpers/variables.scss';
-@import './content/components/container.scss';
-@import './content/components/footer.scss';
-@import './content/components/card.scss';
-
-@import './content/components/categoryCard.scss';
-@import './content/components/categoryCardBox.scss';
-@import './content/components/history-swiper.scss';
-@import './content/components/speed-swiper.scss';
-@import './content/components/mediaBreakpoints.scss';
+@import './content/components/*';
