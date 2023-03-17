@@ -1,0 +1,11 @@
+mixin categoryCard(text,num)
+  .category-card
+    .category-card__wrapper
+      +card_bac.category-card__bac-svg
+      block
+      .category-card__num 
+        p=num<10?"0"+num:num
+    .category-card__text 
+      p=text
+
+

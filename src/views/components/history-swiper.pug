@@ -1,0 +1,26 @@
+mixin history-swiper 
+  section.history
+    .container
+      .history-swiper__controls.controls
+        .controls__year
+          //- each year in [2015,2016,2017,2018,2019,2020,2021,2022,2023]
+          //-   button.controls__year-btn=year
+        .controls-box
+          .controls-box__btn.btn__prev 
+            +arrowDown-svg.controls-box__btn-svg
+          .controls-box__btn.btn__next
+            +arrowDown-svg.controls-box__btn-svg
+      .swiper
+      
+        .swiper-wrapper
+          .swiper-slide
+            .swiper-slide__column-img
+            .swiper-slide__column-text
+              h2.swiper-slide__title 2017         
+              p.swiper-slide__text Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые принципы и стратегические направления развития. Несмотря на сложный период становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
+          .swiper-slide Slide 2
+          .swiper-slide 3
+          .swiper-slide 4
+          .swiper-slide 3
+          .swiper-slide 4
+

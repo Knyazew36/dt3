@@ -1,0 +1,18 @@
+mixin card
+  .card
+    .card__wrapper
+      .card__row-top
+        h2.card__title Lorem, ipsum dolor.
+        button.card__btn Новости рынка
+      .card__row-bottom 
+        .date
+          .date__day 
+            span 22
+          .date__item 
+            span декабря
+            span 2021
+        .card__arrow 
+          .card__arrow-box
+            +arrowDown-svg.card__arrow-svg
+    .card__hover 
+      +card-hover-svg.card__hover-svg

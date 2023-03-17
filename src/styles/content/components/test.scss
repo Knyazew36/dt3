@@ -1,0 +1,62 @@
+.routes {
+  margin-top: 30px;
+
+  &__item {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.blue-fill {
+  fill: var(--color-blue);
+}
+
+.blude-stroke {
+  stroke: var(--color-blue);
+}
+
+.test-table {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+
+  &:not(:first-child) {
+    margin-top: 60px;
+  }
+
+  &.hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: none;
+    
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.test-col {
+  border-right: 1px solid var(--color-black);
+}
+
+.test-cell {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include fsl(12px);
+  border-bottom: 1px solid var(--color-black);
+}
+
+.test-pdf {
+  margin: 40px;
+}
+
+.test-qwe {
+  color: red;
+  margin-left: 100px;
+}

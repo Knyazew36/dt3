@@ -1,0 +1,55 @@
+.category-card {
+  width: rem(435px);
+  height: rem(240px);
+  position: relative;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background: #F0F7F3;
+    position: relative;
+  }
+
+  &__bac-svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: rem(128px);
+    height: rem(217px);
+  }
+
+  &-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: rem(72px);
+    height: rem(60px);
+  }
+
+  &__num {
+    position: absolute;
+    top: rem(24px);
+    right: rem(24px);
+
+    font-family: 'Halvar Breitschrift';
+    font-weight: 700;
+    font-size: rem(20px);
+    text-transform: uppercase;
+    color: #CBD8D1;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: rem(24px);
+    left: rem(24px);
+
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: rem(16px);
+    color: #181D1D;
+  }
+}

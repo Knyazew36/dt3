@@ -1,0 +1,42 @@
+
+block variables
+  - var mainClass=''
+
+
+
+include ../components/svg
+
+include ../components/header
+include ../components/footer
+include ../components/card
+include ../components/categoryCard
+include ../components/categories-btn
+include ../components/history-swiper
+include ../components/speed-swiper
+include ../components/picters
+doctype html
+
+html(lang='ru')
+  
+  head
+    meta(charset="utf-8")
+    title= data.title
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    //- favicon
+    meta(name="format-detection" content="telephone=no")
+  
+  body.body
+
+    .wrapper
+      block variables
+      block header
+        //- +header
+
+      main.main(class=mainClass)
+        block content
+        
+
+      block footer
+        //- +footer
+
+    block scripts

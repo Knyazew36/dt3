@@ -1,0 +1,58 @@
+.categories-btn {
+  width: auto;
+  height: auto;
+  background-color: #006525;
+  position: relative;
+  overflow: hidden;
+
+  &__bg__svg {
+    position: absolute;
+    top: rem(72px);
+    left: rem(226px);
+
+    width: rem(201px);
+    height: rem(160px);
+  }
+
+  &__icon__svg {
+    top: rem(24px);
+    left: rem(24px);
+    position: absolute;
+
+
+    width: rem(44px);
+    height: rem(44px);
+  }
+
+  &__arrow__svg {
+    bottom: rem(24px);
+    right: rem(24px);
+    position: absolute;
+
+
+    width: rem(24px);
+    height: rem(24px);
+
+    transform: rotate(-90deg);
+
+    & path {
+      stroke: white
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Manrope';
+
+    font-weight: 500;
+    font-size: rem(22px);
+
+
+    color: #FFFFFF;
+
+  }
+}

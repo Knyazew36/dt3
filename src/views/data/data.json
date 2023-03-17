@@ -1,0 +1,159 @@
+{
+  "title": "slt-html",
+  "phone": "8 800 444-72-37",
+  "routes": [
+    {
+      "href": "main",
+      "title": "Главная"
+    },
+    {
+      "href": "catalog",
+      "title": "Каталог карточка муфта"
+    },
+    {
+      "href": "catalog-empty",
+      "title": "Каталог карточка заглушка"
+    },
+    {
+      "href": "catalog-category",
+      "title": "Каталог категория 1"
+    },
+    {
+      "href": "catalog-category-2",
+      "title": "Каталог категория 2"
+    },
+    {
+      "href": "catalog-category-3",
+      "title": "Каталог категория 3"
+    },
+    {
+      "href": "catalog-category-4",
+      "title": "Каталог категория 4"
+    },
+    {
+      "href": "catalog-general",
+      "title": "Каталог общий"
+    },
+    {
+      "href": "catalog-card",
+      "title": "Каталог карточка труба"
+    },
+    {
+      "href": "about",
+      "title": "[О нас] СЛТ Аква"
+    },
+    {
+      "href": "about-production",
+      "title": "[О нас] Производство"
+    },
+    {
+      "href": "about-work",
+      "title": "[О нас] Работа у нас"
+    },
+    {
+      "href": "cooperation",
+      "title": "Сотрудничество"
+    },
+    {
+      "href": "cooperation-ad",
+      "title": "[Сотрудничество] Рекламная поддрежка"
+    },
+    {
+      "href": "calculator",
+      "title": "Калькулятор"
+    },
+    {
+      "href": "calculator-2",
+      "title": "Калькулятор 2"
+    },
+    {
+      "href": "calculator-3",
+      "title": "Калькулятор 3"
+    },
+    {
+      "href": "calculator-4",
+      "title": "Калькулятор 4"
+    },
+    {
+      "href": "calculator-5",
+      "title": "Калькулятор 5"
+    },
+    {
+      "href": "calculator-blockfire",
+      "title": "Калькулятор blockfire [1]"
+    },
+    {
+      "href": "calculator-2-blockfire",
+      "title": "Калькулятор blockfire [2]"
+    },
+    {
+      "href": "where-buy-list",
+      "title": "[Где купить] Списком"
+    },
+    {
+      "href": "where-buy-map",
+      "title": "[Где купить] На карте"
+    },
+    {
+      "href": "docs",
+      "title": "Техническая информация"
+    },
+    {
+      "href": "docs-program",
+      "title": "[Техническая информация] Программы"
+    },
+    {
+      "href": "docs-info",
+      "title": "[Техническая информация] Информационные материалы"
+    },
+    {
+      "href": "order",
+      "title": "Заказ"
+    },
+    {
+      "href": "order-empty",
+      "title": "Заказ пустой"
+    },
+    {
+      "href": "order-success",
+      "title": "Заказ успешно оформлен"
+    },
+    {
+      "href": "ordering",
+      "title": "Оформление заказа"
+    },
+    {
+      "href": "objects",
+      "title": "Объекты"
+    },
+    {
+      "href": "objects-detail",
+      "title": "Объекты детальная"
+    },
+    {
+      "href": "events",
+      "title": "События"
+    },
+    {
+      "href": "events-detail",
+      "title": "События детальная"
+    },
+    {
+      "href": "searching-results",
+      "title": "Результаты поиска"
+    },
+    {
+      "href": "contacts",
+      "title": "Контакты"
+    },
+    {
+      "href": "404",
+      "title": "404"
+    }
+  ],
+  "radioButtons": [
+    {"text": "SLT AQUA PP-R", "value": 20, "ratio": 0.15},
+    {"text": "SLT AQUA PP-R-GF", "value": 25, "ratio": 0.04},
+    {"text": "SLT AQUA PP-R/AL", "value": 32, "ratio": 0.035}
+  ]
+}

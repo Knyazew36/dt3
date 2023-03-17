@@ -1,0 +1,113 @@
+mixin footer
+  footer
+    .container
+      .footer__row-top
+        .col
+          .footer__logo
+            +logo-svg.footer__logo-svg
+        .col
+          a.footer__intro
+            .intro__logo 
+              +services-svg.intro__logo__svg
+            .intro__text
+              p Услуги 
+            .intro__arrow
+              +arrowDown-svg.footer__arrow-svg 
+        .col
+          a.footer__intro            
+            .intro__logo 
+              +map-svg.intro__logo__svg
+            .intro__text 
+                  p Карта маршрутов 
+            .intro__arrow
+              +arrowDown-svg.footer__arrow-svg 
+        .col
+          a.footer__intro
+            .intro__logo 
+              +search-intro-svg.intro__logo__svg
+            .intro__text 
+                p Отслеживание грузов
+            .intro__arrow
+              +arrowDown-svg.footer__arrow-svg 
+      .footer__row-middle
+        .footer__column-left
+          .footer__links
+            a.footer__phone(href="tel:+74959959591") +7 495 995-95-91
+            a.footer__mail(href="mailto:nutlc@utlc.com") utlc@utlc.com
+          .footer__links-soc
+            .footer__link-box
+              a(href="#") 
+                +telegram-svg.footer__links-svg 
+            .footer__link-box
+              a(href="#") 
+                +yandex-svg.footer__links-svg 
+            .footer__link-box
+              a(href="#") 
+                +dialog-svg.footer__links-svg 
+          .footer__politic
+            a(href="#") Политика в отношении обработки персональных данных 
+            a(href="#") Политика по КСО
+        .footer__column-right
+          .footer__item 
+            a.footer__heading(href="#") О компании
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Органы управления и контроля
+              li
+                a.footer__item-link(href="#") Реестродержатель
+              li
+                a.footer__item-link(href="#") Документы
+              li
+                a.footer__item-link(href="#") Дипломы и сертификаты
+          .footer__item 
+            a.footer__heading(href="#") Корпоративная социальная ответственность
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Экология
+              li
+                a.footer__item-link(href="#") Благотворительность
+              li
+                a.footer__item-link(href="#") UTLC CUP
+              li
+                a.footer__item-link(href="#") Карьера
+          .footer__item 
+            a.footer__heading(href="#") Закупки
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Календарь мероприятий
+              li
+                a.footer__item-link(href="#") План закупок
+              li
+                a.footer__item-link(href="#") Личный кабинет поставщика
+          .footer__item 
+            a.footer__heading(href="#") One million club
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Календарь событий
+              li
+                a.footer__item-link(href="#") Отраслевые новости
+          .footer__item 
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Пресс-центр
+              li
+                a.footer__item-link(href="#") ERAI
+          .footer__item 
+            ul.footer__item-list
+              li
+                a.footer__item-link(href="#") Контакты
+              li
+                a.footer__item-link(href="#") Часто задаваемые вопросы
+      .footer__row-bottom
+        .column
+          a.footer__link-ao © АО «ОТЛК ЕРА», 2023 
+        .column 
+          .footer__parthners
+            a.footer__parthners-link(href="#")
+              +partners-1-svg.footer__partners-svg
+            a.footer__parthners-link(href="#")
+              +partners-2-svg.footer__partners-svg
+            a.footer__parthners-link(href="#")
+              +partners-3-svg.footer__partners-svg
+          a.footer__link-cloud(href="#") Сделано в 
+            span CloudMill

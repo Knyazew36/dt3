@@ -1,0 +1,137 @@
+.speed {
+  background: #181D1D;
+  padding-top: rem(120px);
+  padding-bottom: rem(60px);
+  padding-right: $col-gap;
+  padding-left: $col-gap;
+  display: flex;
+
+
+}
+
+.swiper-speed {
+  height: 100%;
+
+  &__pagination-bullet {
+    display: inline-block;
+    width: 1.5px;
+    opacity: 0.3;
+    height: 34px;
+    background: #FFFFFF;
+    transition: all .7s ease;
+
+    &-active {
+      height: 89px;
+      opacity: 1;
+    }
+  }
+}
+
+.speed__pagination {
+  display: flex;
+  gap: 20px;
+  height: 89px;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.speed__column-left {
+  width: 50%;
+  height: rem(740px);
+  overflow: hidden;
+
+}
+
+.speed__column-right {
+  padding-top: rem(60px);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.swiper-vertical {
+  display: flex;
+
+  margin-left: calc(#{$col-width-d}*-1);
+  position: relative;
+  z-index: 1;
+  height: rem(300px);
+  overflow: hidden;
+
+  & .swiper__title h2 {
+    font-weight: 700;
+    font-size: rem(106px);
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: rem(43px);
+  }
+
+  & .swiper__text {
+    margin-left: calc(#{$col-width-d}*2);
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: rem(24px);
+    line-height: 160%;
+    color: #FFFFFF;
+    max-width: rem(560px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  & .swiper-slide-active .swiper__text {
+    opacity: 1;
+  }
+
+  & .swiper-slide {
+    padding-top: rem(10px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+
+
+.speed__row-bottom {
+  padding-left: calc(#{$col-width-d});
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  & .speed__controls {
+    display: flex;
+    gap: rem(10px);
+
+    & .speed__btn {
+      position: relative;
+      width: rem(140px);
+      height: rem(140px);
+      opacity: 0.3;
+      border: 1.5px solid #FFFFFF;
+      cursor: pointer;
+
+      &-prev {
+        transform: rotate(90deg);
+      }
+
+      &-next {
+        transform: rotate(-90deg);
+      }
+
+      &-svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(28px);
+        height: rem(28px);
+
+        & path {
+          stroke: white;
+        }
+      }
+    }
+  }
+}
