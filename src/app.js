@@ -1,64 +1,59 @@
 import "./styles/app.scss";
 
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from "swiper";
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // init Swiper:
 
-const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
-const swiper = new Swiper('.swiper', {
-  // configure Swiper to use modules
+// const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+// const swiper = new Swiper(".swiper", {
+//   // configure Swiper to use modules
+//   modules: [Navigation, Pagination],
+
+//   navigation: {
+//     nextEl: ".btn__next",
+//     prevEl: ".btn__prev",
+//   },
+
+//   pagination: {
+//     el: ".controls__year",
+//     clickable: true,
+//     renderBullet: function (index, className) {
+//       return '<button class="' + className + '">' + year[index] + "</button>";
+//     },
+//   },
+// });
+
+const swiperSpeed = new Swiper(".swiper-img", {
   modules: [Navigation, Pagination],
-
+  allowTouchMove: false,
+  loop: true,
   navigation: {
-    nextEl: '.btn__next',
-    prevEl: '.btn__prev',
-  },
-
-  pagination: {
-    el: '.controls__year',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<button class="' + className + '">' + (year[index]) + '</button>';
-    },
-  },
-
-});
-
-
-const swiperSpeed = new Swiper('.swiper-speed', {
-  modules: [Navigation, Pagination],
-
-  navigation: {
-    nextEl: '.speed__btn-next',
-    prevEl: '.speed__btn-prev',
+    nextEl: ".about-page__btn-next",
+    prevEl: ".about-page__btn-prev",
   },
   pagination: {
-    el: '.speed__pagination',
-    bulletClass: 'swiper-speed__pagination-bullet',
-    bulletActiveClass: 'swiper-speed__pagination-bullet-active',
+    el: ".about-page__slider-pagination",
+    bulletClass: "about-page__slider-bullet",
+    bulletActiveClass: "about-page__slider-bullet-active",
 
     renderBullet: function (index, className) {
       return '<span class="' + className + '"></span>';
-    }
+    },
   },
-
-
 });
 
-
-const swiperVertical = new Swiper('.swiper-vertical', {
-  direction: 'vertical',
+const swiperText = new Swiper(".swiper-text", {
   modules: [Navigation, Pagination],
-
+  allowTouchMove: false,
+  speed: 0,
+  loop: true,
   navigation: {
-    nextEl: '.speed__btn-next',
-    prevEl: '.speed__btn-prev',
+    nextEl: ".about-page__btn-next",
+    prevEl: ".about-page__btn-prev",
   },
 });
-

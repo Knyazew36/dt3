@@ -12,8 +12,8 @@ include ../components/card
 include ../components/categoryCard
 include ../components/categories-btn
 include ../components/history-swiper
-include ../components/speed-swiper
-include ../components/picters
+include ../components/about-page-slider
+include ../components/picture
 doctype html
 
 html(lang='ru')
@@ -30,13 +30,13 @@ html(lang='ru')
     .wrapper
       block variables
       block header
-        //- +header
+        +header
 
       main.main(class=mainClass)
         block content
         
 
       block footer
-        //- +footer
+        +footer
 
     block scripts
