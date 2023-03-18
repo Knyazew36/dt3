@@ -1,56 +1,39 @@
 mixin header 
-    header
-        .header__dekstop
-            .container.header__container
-                .header__col 
-                    .header__drobdown.dropdown
-                        .dropdown__btn 
-                            a RU
-                        .dropdown__icon
-                            +arrowDown-svg
-                        .dropdown__content   
-                            a.dropdown__link RU 
-                            a.dropdown__link EN
-                .header__col
+    header.header 
+        .header__container.container
+            .header__desktop
+                .col 
+                    button.header__lang
+                        .header__box 
+                            .header__lang-text RU 
+                            .header__lang-arrow 
+                                +arrowDown-svg.header__lang-svg
+                        
+                .col
                     a.header__logo
-                        +logo-svg.logo-svg
-                .header__col     
-                    .header__menu-btn 
-                        .header__menu-text 
-                            p меню
-                        .header__menu-burger                           
-                .header__col 
-                    .header__box
-                        +serach-svg.header__search-svg
-                .header__col
-                    nav.header__nav.nav
-                        ul.nav__list
-                            li.nav__item: a.nav__link(href='#') Услуги
-                            li.nav__item: a.nav__link(href='#') Карта маршрутов
-                            li.nav__item: a.nav__link(href='#') Отслеживание грузов
-                    .header__links      
-                        a.header__phone(href="tel:+74959959591") +7 495 995-95-91   
-                        .header__box    
-                            a.header__mail
-                                +mail-svg  
-                        .header__box      
-                            a.header__user
-                                +user-svg
-        .header__mobile.container            
-            .col 
-                a.header__logo
-                    +logo-svg.logo-svg
-            .col 
-                .header__box
-                    a.header__search(href="#") 
-                        +serach-svg.header__mobile-svg
-                .header__box
-                    a.header__phone
-                        +call-svg.header__mobile-svg
-                .header__box
-                    a.header__mail
-                        +mail-svg.header__mobile-svg
-                .header__menu-btn 
-                    .header__menu-text 
-                        p меню
-                    .header__menu-burger   
+                        +logo-svg.header__logo-svg
+                .col
+                    .header__menu 
+                        .header__menu-text Меню
+                        .header__menu-burger
+                        
+                .col
+                    button.header__search 
+                        .header__box 
+                            +search-svg.header__search-svg
+                .col
+                    nav.header__navigation
+                        ul.header__list 
+                            each link in ['Услуги','Карта маршрутов','Отслеживание грузов']
+                                li.header__item 
+                                    a.header__link=link
+                    .header__links
+                        a.header__phone(href="tel: +74959959591") +7 495 995-95-91
+                        .header__user
+                            button.header__call
+                                .header__box 
+                                    +call-svg.header__call-svg
+                            button.header__mail
+                                .header__box
+                                    +mail-svg.header__mail-svg
+            .header__mobile 
