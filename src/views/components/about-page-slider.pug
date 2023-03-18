@@ -1,85 +1,36 @@
-//- mixin speed-swiper 
-//-   section.speed
-//-     .speed__column-left
-//-       .swiper-speed
-//-         .swiper-wrapper
-//-           .swiper-slide
-//-             +picture('slider-speed-1.jpg')
-//-           .swiper-slide slide 2
-//-           .swiper-slide slide 3
-//-           .swiper-slide slide 4
-//-           .swiper-slide slide 5
-//-     .speed__column-right
-//-       .speed__row
-//-         .swiper-vertical
-//-           .swiper-wrapper
-//-             .swiper-slide
-//-               .swiper__title 
-//-                 h2 скорость
-//-               .swiper__text
-//-                 p 5-7 дней от границы КНР до границы Европы.В 3-5 раз быстрее доставки по морю.
-//-             .swiper-slide
-//-               .swiper__title 
-//-                 h2 Второй слайд
-//-               .swiper__text
-//-                 p 5-7 дней от границы КНР до границы Европы.В 3-5 раз быстрее доставки по морю.
-//-             .swiper-slide
-//-               .swiper__title 
-//-                 h2 скорость
-//-               .swiper__text
-//-                 p 5-7 дней от границы КНР до границы Европы.В 3-5 раз быстрее доставки по морю.
-//-             .swiper-slide
-//-               .swiper__title 
-//-                 h2 скорость
-//-               .swiper__text
-//-                 p 5-7 дней от границы КНР до границы Европы.В 3-5 раз быстрее доставки по морю.
-//-             .swiper-slide
-//-               .swiper__title 
-//-                 h2 Второй слайд
-//-               .swiper__text
-//-                 p 5-7 дней от границы КНР до границы Европы.В 3-5 раз быстрее доставки по морю.
-            
-//-       .speed__row-bottom
-//-         .speed__controls
-//-           .speed__btn.speed__btn-prev
-//-             +arrowDown-svg.speed__btn-svg
-//-           .speed__btn.speed__btn-next
-//-             +arrowDown-svg.speed__btn-svg
-//-         .speed__pagination
-
-
-
-
 mixin about-page__slider
-  .section.about-page__slider
-    .about-page__slider-container.container
-      .about-page__slider-col
-        .swiper-img 
-          .swiper-wrapper
-            .swiper-slide
-              +picture('slider-speed-1.jpg')
-            .swiper-slide
-              +picture('slider-speed-1.jpg')
-            .swiper-slide
-              +picture('slider-speed-1.jpg')
+  section.about-page__slider
+    .about-page__desktop
+      .about-page__slider-container.container
+        .about-page__slider-col
+          .swiper-img 
+            .swiper-wrapper
+              .swiper-slide
+                +picture('slider-speed-1.jpg')
+              .swiper-slide
+                +picture('slider-speed-1.jpg')
+              .swiper-slide
+                +picture('slider-speed-1.jpg')
 
-      .about-page__slider-col
-        .about-page__slider-row 
-          .swiper-text
-            .swiper-wrapper 
-              .swiper-slide
-                .swiper-slide__title Скорость
-                .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
-              .swiper-slide
-                .swiper-slide__title Второй слайд
-                .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
-              .swiper-slide
-                .swiper-slide__title Третий слайд
-                .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
-        .about-page__slider-row
-          .about-page__slider-control 
-            .about-page__slider-btn.about-page__btn-prev
-              +arrowLeft-svg.about-page__slider-btn-svg
-            .about-page__slider-btn.about-page__btn-next
-              +arrowRight-svg.about-page__slider-btn-svg  
-          .about-page__slider-pagination
+        .about-page__slider-col
+          .about-page__slider-row 
+            .swiper-text
+              .swiper-wrapper 
+                .swiper-slide
+                  .swiper-slide__title Скорость
+                  .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
+                .swiper-slide
+                  .swiper-slide__title Второй слайд
+                  .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
+                .swiper-slide
+                  .swiper-slide__title Третий слайд
+                  .swiper-slide__text 5-7 дней от границы КНР до границы Европы. В 3-5 раз быстрее доставки по морю.
+          .about-page__slider-row
+            .about-page__slider-control 
+              .about-page__slider-btn.about-page__btn-prev
+                +arrowLeft-svg.about-page__slider-btn-svg
+              .about-page__slider-btn.about-page__btn-next
+                +arrowRight-svg.about-page__slider-btn-svg  
+            .about-page__slider-pagination
+    .about-page__mobile 
+    

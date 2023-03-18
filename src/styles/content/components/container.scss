@@ -2,3 +2,9 @@
   padding: 0 $col-pad-d;
 }
 
+@media(max-width: $breakpoint) {
+  .container {
+    padding: 0 $col-pad-m;
+  }
+
+}

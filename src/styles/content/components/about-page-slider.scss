@@ -7,6 +7,10 @@
         display: flex;
     }
 
+    & .about-page__mobile {
+        display: none;
+    }
+
     &-col {
         width: 50%;
 

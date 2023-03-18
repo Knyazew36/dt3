@@ -1,14 +1,17 @@
 .header {
   background: #181D1D;
 
-  &__container {}
-
   &__desktop {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: rem(60px) 0;
     position: relative;
 
+  }
+
+  &__mobile {
+    display: none;
   }
 
   & .col {
@@ -57,6 +60,11 @@
       &::before {
         transform: translateY(0);
       }
+
+      & .header__lang-svg {
+        transform: rotate(-180deg);
+      }
+
     }
 
     &-text {
@@ -73,6 +81,7 @@
     &-svg {
       width: rem(12px);
       height: rem(12px);
+      transition: all .5s ease;
     }
   }
 
@@ -243,11 +252,80 @@
         transform: translateY(0);
       }
     }
-
-
     &-svg {
       width: rem(20px);
       height: rem(20px);
+
+      & path {
+        stroke: white;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .header {
+    padding: rem(20px) 0;
+
+    & .col {
+      width: calc(#{$col-width-m});
+
+      &:nth-child(2) {
+        width: calc(#{$col-width-m}*3);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: rem(6px);
+      }
+    }
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__logo-svg {
+      width: rem(78px);
+      height: rem(32px);
+    }
+
+    &__box {
+      width: rem(32px);
+      height: rem(32px);
+    }
+
+    &__menu {
+      position: static;
+      flex-direction: row;
+      justify-content: space-between;
+      width: rem(92px);
+      height: rem(32px);
+      padding-bottom: 0;
+      padding: 0rem(12px);
+
+      &-text {
+        margin-bottom: 0;
+        font-size: rem(10px);
+      }
+
+      &-burger {
+        height: rem(6px);
+
+        &::before,
+        &::after {
+          width: rem(28px);
+        }
+      }
+    }
+
+    &__svg {
+      width: rem(16px);
+      height: rem(16px);
 
       & path {
         stroke: white;
