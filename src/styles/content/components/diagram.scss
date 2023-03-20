@@ -13,13 +13,16 @@
         color: #181D1D;
 
 
-
     }
 
     .item {
-        display: flex;
-        height: rem(64px);
-        align-items: flex-start;
+        display: inline-block;
+
+        &__wrapper {
+            display: flex;
+            height: rem(64px);
+            align-items: flex-start;
+        }
 
         &__col {
             &:nth-child(1) {
@@ -46,6 +49,7 @@
             border-radius: 8px;
             position: relative;
             transition: $transition;
+            backface-visibility: hidden;
             overflow: hidden;
 
 
