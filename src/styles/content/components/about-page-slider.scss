@@ -1,3 +1,10 @@
+.about-page {
+
+
+
+    &__slider {}
+}
+
 .about-page__slider {
     padding-top: rem(120px);
     padding-bottom: rem(60px);
@@ -44,7 +51,7 @@
         opacity: 0.3;
         border: 1.5px solid #FFFFFF;
         overflow: hidden;
-        transition: transform $transition-duration $transition-timing-function;
+        transition: transform $transition;
 
         &::before {
             content: '';
@@ -104,19 +111,25 @@
 .swiper-text {
     overflow: hidden;
     color: #FFFFFF;
-    width:calc(#{$col-width-d}*6);
+    width:calc(#{$col-width-d}*7);
 
     & .swiper-slide {
         display: flex;
         flex-direction: column;
+        transition-delay: .5s;
 
         &__title {
+            overflow: hidden;
             font-weight: 700;
             font-size: rem(106px);
             text-transform: uppercase;
-            transform: translateY(50%);
-            transition: all .5s ease .5s;
-            opacity: 0;
+
+
+            & span {
+                display: inline-block;
+                transform: translateY(100%);
+                transition: all .5s ease;
+            }
         }
 
         &__text {
@@ -135,12 +148,17 @@
     opacity: 1;
 }
 
-.swiper-slide-active .swiper-slide__title {
+.swiper-slide-active .swiper-slide__title span {
     transform: translateY(0);
     opacity: 1;
 }
 
-.swiper-slide-active+.swiper-slide-next .swiper-slide__title {
-    transform: translateY(50%);
+.swiper-slide-next .swiper-slide__title span {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.swiper-slide-prev .swiper-slide__title span {
+    transform: translateY(-100%);
     opacity: 0;
 }

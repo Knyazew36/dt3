@@ -7,26 +7,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// init Swiper:
+const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+const swiper = new Swiper(".swiper", {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
 
-// const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
-// const swiper = new Swiper(".swiper", {
-//   // configure Swiper to use modules
-//   modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".btn__next",
+    prevEl: ".btn__prev",
+  },
 
-//   navigation: {
-//     nextEl: ".btn__next",
-//     prevEl: ".btn__prev",
-//   },
-
-//   pagination: {
-//     el: ".controls__year",
-//     clickable: true,
-//     renderBullet: function (index, className) {
-//       return '<button class="' + className + '">' + year[index] + "</button>";
-//     },
-//   },
-// });
+  pagination: {
+    el: ".controls__year",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<button class="' + className + '">' + year[index] + "</button>";
+    },
+  },
+});
 
 const swiperSpeed = new Swiper(".swiper-img", {
   modules: [Navigation, Pagination],
@@ -57,3 +55,24 @@ const swiperText = new Swiper(".swiper-text", {
     prevEl: ".about-page__btn-prev",
   },
 });
+
+window.addEventListener('scroll', (e) => {
+
+  console.log(window.scrollY)
+})
+
+
+
+
+
+$(window).on('click', event => {
+  const accordion = $(event.target).closest('[data-accordion]')
+
+  if (accordion.length) {
+    const dropdown = accordion.find('[data-accordion-dropdown]')
+
+    dropdown.slideToggle(200)
+    accordion.toggleClass('active')
+  }
+})
+

@@ -1,0 +1,15 @@
+mixin question
+  .question.container 
+    h2.question__title Задать вопрос <br/>по процедуре
+      
+    form.question__form(action="#")
+      input.question__name(type="text" id="name" placeholder="ФИО")
+      textarea.question__text(placeholder='Текст вопроса')
+      .question__checkbox
+        input.question__checkbox-input(type="checkbox" id='checkbox')
+       
+        label.question__checkbox-label(for='checkbox')
+          +check.question__checkbox-svg     
+        p.question__checkbox-text Согласие с политикой в отношении #[a(href="#")  обработки персональных данных]
+      button.question__btn(type='submit') Отправить
+        

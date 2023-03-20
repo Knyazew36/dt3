@@ -1,0 +1,108 @@
+.diagram {
+    height: rem(899px);
+    background: #F4F4F4;
+    position: relative;
+    padding-top: rem(60px);
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(46px);
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #181D1D;
+
+
+
+    }
+
+    .item {
+        display: flex;
+        height: rem(64px);
+        align-items: flex-start;
+
+        &__col {
+            &:nth-child(1) {
+                width: rem(47px);
+                margin-right: rem(12px);
+            }
+        }
+
+
+        &:hover {
+            .item__box::before {
+                transform: translateY(0);
+            }
+
+            path {
+                fill: white;
+            }
+        }
+
+        &__box {
+            width: rem(47px);
+            height: rem(47px);
+            background: #FFFFFF;
+            border-radius: 8px;
+            position: relative;
+            transition: $transition;
+            overflow: hidden;
+
+
+            &-svg {
+                @include absolute-center
+            }
+
+            &::before {
+                content: '';
+                @include btn-before;
+                background: #006525;
+            }
+
+        }
+
+        path {
+            transition: $transition;
+        }
+
+        &__row {
+
+            &:nth-child(2) {
+                margin-bottom: rem(-6px);
+                font-weight: 700;
+                font-size: rem(34px);
+                letter-spacing: -0.02em;
+                text-transform: uppercase;
+                color: #045C25;
+            }
+
+            &:nth-child(3) {
+                font-weight: 500;
+                font-size: rem(12px);
+                line-height: 130%;
+                color: #006525;
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: rem(10px);
+            line-height: 110%;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #181D1D;
+
+        }
+    }
+
+    &-svg {
+        position: absolute;
+        bottom: rem(-25px);
+
+        width: rem(1469px);
+        height: rem(735px);
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
