@@ -26,9 +26,16 @@ block content
 
   //- +about-page__slider
   button.question__btn(data-fancy-btn='') Отправить
+  //- button.question__btn(data-fancybox='') Отправить
   +question
 
   //- +accordeon
 
   //- +user-content
   //- +diagram
+  .select-wrapper 
+    .select 
+      select.select__select(style="width: 100%") 
+        each item in ['qwe', 'asd', 'zxc',3,4]
+          option(value=item) 
+            |#{item}

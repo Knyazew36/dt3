@@ -1,5 +1,6 @@
 import "./styles/app.scss";
 import "@fancyapps/fancybox"
+import 'select2'
 
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination } from "swiper";
@@ -80,13 +81,35 @@ $(window).on('click', event => {
 // modal
 {
   $(() => {
-    const modal = $('[data-modal]')
-    const btn = $('[data-fancy-btn]')
 
-    btn.on('click', function() {
+    const modal = $('[data-modal]')
+    const btn = $('[data-fancy-btn]');
+
+    const defaults = {
+      touch: false,
+      animationEffect: "left",
+
+
+    }
+    $.fancybox.defaults = { ...$.fancybox.defaults, ...defaults }
+
+
+    btn.on('click', function () {
       $.fancybox.defaults.animationEffect = "left";
 
+
       $.fancybox.open(modal)
+    })
+  })
+}
+
+// select
+{
+  $(() => {
+    $('.select__select').select2({
+
+      minimumResultsForSearch: -1,
+      dropdownParent: '.select-wrapper',
     })
   })
 }

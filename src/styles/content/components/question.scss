@@ -1,10 +1,15 @@
 .question {
-  // display: flex;
+
+  overflow: visible;
   flex-direction: column;
-  width: calc(#{$col-width-d}*4);
+  width: calc(#{$col-width-d}*4-$col-gap);
   height: rem(1080px);
   display: none;
   font-family: 'Halvar Breitschrift';
+  padding-top: rem(48px);
+  position: absolute;
+  top: 0;
+  left: 0;
 
   &__title {
     margin-bottom: rem(32px);
@@ -124,6 +129,35 @@
     cursor: pointer;
   }
 
+  &__close {
+    width: rem(64px);
+    height: rem(64px);
+    background: #181D1D;
+    position: absolute;
+    top: 0;
+    right: rem(-64px);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: rem(20px);
+      width: 1px;
+      background-color: white;
+      top: 50%;
+      height: 50%;
+
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+
+    }
+  }
 }
 
 .question__checkbox-input:checked+.question__checkbox-label {

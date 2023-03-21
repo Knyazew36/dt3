@@ -1,0 +1,18 @@
+.fancybox-fx-left.fancybox-slide--previous {
+    transform: translateX(-100%);
+}
+
+.fancybox-fx-left.fancybox-slide--next {
+    transform: translateX(-100%);
+
+
+}
+
+.fancybox-fx-left.fancybox-slide--current {
+    transform: translateX(0);
+}
+
+.fancybox-slide--html .fancybox-close-small {
+    display: none;
+}
+
