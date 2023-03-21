@@ -26,9 +26,7 @@
 
         &.select2-container--open {
             .select2-selection {
-                // border-color: red;
-
-
+                border: 1px solid #006525;
 
                 &__arrow {
 
@@ -147,7 +145,6 @@
         }
 
         box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
-        // box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
         border-radius: 0;
         border: none;
     }
@@ -185,8 +182,9 @@
         }
 
         &--highlighted[aria-selected] {
-            color: color(yellow);
-            background-color: color(white);
+            // color: color(yellow);
+            // background-color: color(white);
+
         }
 
         &[aria-selected=true] {
