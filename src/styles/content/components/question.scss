@@ -1,8 +1,9 @@
 .question {
-  display: flex;
+  // display: flex;
   flex-direction: column;
   width: calc(#{$col-width-d}*4);
-
+  height: rem(1080px);
+  display: none;
   font-family: 'Halvar Breitschrift';
 
   &__title {

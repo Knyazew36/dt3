@@ -1,4 +1,5 @@
 import "./styles/app.scss";
+import "@fancyapps/fancybox"
 
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination } from "swiper";
@@ -76,3 +77,16 @@ $(window).on('click', event => {
   }
 })
 
+// modal
+{
+  $(() => {
+    const modal = $('[data-modal]')
+    const btn = $('[data-fancy-btn]')
+
+    btn.on('click', function() {
+      $.fancybox.defaults.animationEffect = "left";
+
+      $.fancybox.open(modal)
+    })
+  })
+}

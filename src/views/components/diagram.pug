@@ -10,8 +10,7 @@ mixin diagram
                 .diagram__item.item
                     .item__wrapper    
                         .item__col 
-                            .item__box
-                                +ship-svg.item__box-svg
+                            +ship-svg.item__box-svg
                         .item__col
                             .item__row 
                                 .item__title 
@@ -20,4 +19,44 @@ mixin diagram
                                 p 159 400
                             .item__row 
                                 p Lorem.
-            +diagram-svg.diagram-svg
+                .diagram__item.item
+                    .item__wrapper    
+                        .item__col 
+                            +ship-svg.item__box-svg
+                        .item__col
+                            .item__row 
+                                .item__title 
+                                    p Lorem, ipsum.
+                            .item__row
+                                p 159 400
+                            .item__row 
+                                p Lorem.
+                .diagram__item.item
+                    .item__wrapper    
+                        .item__col 
+                            +ship-svg.item__box-svg
+                        .item__col
+                            .item__row 
+                                .item__title 
+                                    p Lorem, ipsum.
+                            .item__row
+                                p 159 400
+                            .item__row 
+                                p Lorem.
+                .diagram__item.item
+                    .item__wrapper    
+                        .item__col 
+                            +ship-svg.item__box-svg
+                        .item__col
+                            .item__row 
+                                .item__title 
+                                    p Lorem, ipsum.
+                            .item__row
+                                p 159 400
+                            .item__row 
+                                p Lorem.
+            .diagram__bg
+                .diagram__bg-wrapper      
+                    +diagram-svg.diagram__bg-svg
+                    +picture('diagram-tree.jpg').diagram__bg-img
+                    
