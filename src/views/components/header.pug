@@ -1,55 +1,145 @@
 mixin header 
-    header.header 
-        .header__container.container
+    header.header
+        .header__container
             .header__desktop
-                .col 
-                    button.header__lang
-                        .header__box 
-                            .header__lang-text RU 
-                            .header__lang-arrow 
-                                +arrowDown-svg.header__lang-svg
-                        
-                .col
-                    a.header__logo
-                        +logo-svg.header__logo-svg
-                .col
-                    .header__menu 
-                        .header__menu-text Меню
-                        .header__menu-burger
-                        
-                .col
-                    button.header__search 
-                        .header__box 
-                            +search-svg.header__search-svg
-                .col
-                    nav.header__navigation
-                        ul.header__list 
-                            each link in ['Услуги','Карта маршрутов','Отслеживание грузов']
-                                li.header__item 
-                                    a.header__link=link
-                    .header__links
-                        a.header__phone(href="tel: +74959959591") +7 495 995-95-91
-                        .header__user
-                            button.header__call
-                                .header__box 
-                                    +call-svg.header__call-svg
-                            button.header__mail
-                                .header__box
-                                    +mail-svg.header__mail-svg
-            .header__mobile
-                .col 
-                    a.header__logo
-                        +logo-svg.header__logo-svg
-                .col
-                    button.header__search 
-                        .header__box 
-                            +search-svg.header__svg               
-                    button.header__call
-                        .header__box
-                            +call-svg.header__svg  
-                    button.header__mail 
-                        .header__box 
-                            +mail-svg.header__svg  
-                    .header__menu 
-                        .header__menu-text Меню
-                        .header__menu-burger
+                .header__row.container 
+                    .col 
+                        button.header__lang
+                            .header__box 
+                                .header__lang-text RU 
+                                .header__lang-arrow 
+                                    +arrowDown-svg.header__lang-svg
+                            
+                    .col
+                        a.header__logo
+                            +logo-svg.header__logo-svg
+                    .col
+                        .header__menu-btn
+                            .header__menu-btn-text Меню
+                            .header__menu-btn__burger
+                            
+                    .col
+                        button.header__search 
+                            .header__box 
+                                +search-svg.header__search-svg
+                    .col
+                        nav.header__navigation
+                            ul.header__list 
+                                each link in ['Услуги','Карта маршрутов','Отслеживание грузов']
+                                    li.header__item 
+                                        a.header__link=link
+                        .header__links
+                            a.header__phone(href="tel: +74959959591") +7 495 995-95-91
+                            .header__user
+                                button.header__call
+                                    .header__box 
+                                        +call-svg.header__call-svg
+                                button.header__mail
+                                    .header__box
+                                        +mail-svg.header__mail-svg
+                .header__mobile.container
+                    .col 
+                        a.header__logo
+                            +logo-svg.header__logo-svg
+                    .col
+                        button.header__search 
+                            .header__box 
+                                +search-svg.header__svg               
+                        button.header__call
+                            .header__box
+                                +call-svg.header__svg  
+                        button.header__mail 
+                            .header__box 
+                                +mail-svg.header__svg  
+                        .header__menu-btn
+                            .header__menu-btn__text Меню
+                            .header__menu-btn__burger
+                .header__menu-container
+                    .header__menu.menu
+                        .menu__row-top.container
+                            .select-wrapper
+                                select.select__select( style="width: 100%") 
+                                    each item in ['EN', 'RU']
+                                        option(value=item) 
+                                            |#{item}
+                            a.menu__row-top__userBtn(href="#")
+                                span 
+                                    +user-svg.user-svg
+                                span Личный кабинет 
+                            .menu__row-top__intro
+                                a.footer__intro.menu__row-top__intro
+                                    .intro__logo 
+                                        +services-svg.intro__logo__svg
+                                    .intro__text
+                                        p Услуги 
+                                    .intro__arrow
+                                        +arrowDown-svg.footer__arrow-svg 
+                            
+                                a.footer__intro.menu__row-top__intro        
+                                    .intro__logo 
+                                        +map-svg.intro__logo__svg
+                                    .intro__text 
+                                        p Карта маршрутов 
+                                    .intro__arrow
+                                        +arrowDown-svg.footer__arrow-svg 
+                            
+                                a.footer__intro.menu__row-top__intro
+                                    .intro__logo 
+                                        +search-intro-svg.intro__logo__svg
+                                    .intro__text 
+                                        p Отслеживание грузов
+                                    .intro__arrow
+                                        +arrowDown-svg.footer__arrow-svg  
+                        .menu__row.container 
+                            .menu__col 
+                                a.menu__tel(href="telL+74959959591") +7 495 995-95-91 
+                                a.menu__mail(href="mailto:utlc@utlc.com") utlc@utlc.com
+                                .menu__soc
+                                    .menu__box.header__box
+                                        +telegram-svg.menu__links-svg
+                                    .menu__box.header__box
+                                        +yandex-svg.menu__links-svg
+                                    .menu__box.header__box
+                                        +dialog-svg.menu__links-svg
+                            .menu__col
+                                .menu__col-row
+                                    .menu__item
+                                        a.menu__link-title Название
+                                        each text in ['lorem','lorem','lorem','lorem']
+                                            a.menu__link #{text}
+                                    .menu__item
+                                        a.menu__link-title Название
+                                        each text in ['lorem','lorem','lorem','lorem']
+                                            a.menu__link #{text} 
+                                    .menu__item
+                                        a.menu__link-title Название
+                                        each text in ['lorem','lorem','lorem','lorem']
+                                            a.menu__link #{text} 
+                                    .menu__item
+                                        a.menu__link-title Название
+                                        each text in ['lorem','lorem','lorem','lorem']
+                                            a.menu__link #{text}   
+
+                                .menu__col-row                           
+                                    .menu__item
+                                        a.menu__link низ1
+                                    .menu__item
+                                        a.menu__link низ1
+                                    .menu__item
+                                        a.menu__link низ1
+                                    .menu__item
+                                        a.menu__link низ1
+                        .menu__row.container 
+                            .menu__otlk 
+                                a © ОТЛК ЕРА, 2023
+                            .menu__partners 
+                                a.menu__partner
+                                    +picture('partner-1.png').menu__partners-img
+                                a.menu__partner
+                                    +picture('partner-2.png').menu__partners-img
+                                a.menu__partner
+                                    +picture('partner-3.png').menu__partners-img
+                            .menu__cloud 
+                                a Сделано в 
+                                    span CloudMill
+                    .header__overlay

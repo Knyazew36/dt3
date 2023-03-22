@@ -18,6 +18,7 @@ $ff-main: 'Manrope';
   --color-green: #1c5e72;
   --color-red: #f04923;
 }
+
 $rgba-borders: rgba(#3F3F40, 0.1);
 $rgba-white: rgba(255, 255, 255, 0.2);
 
@@ -51,4 +52,3 @@ $col-part-d: '(#{$col-width-d} + #{$col-gap})';
 $transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 $transition-duration: .5s;
 $transition: $transition-duration $transition-timing-function;
-
