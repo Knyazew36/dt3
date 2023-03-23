@@ -2,11 +2,322 @@ extends ../layouts/master
 
 
 block content 
-    #map
-    .placemarks 
-        .placemarks__item 
-            .placemarks__coords 
-                |55.8, 37.6
+
+    section.map 
+        .map__container 
+            .map__column 
+                .menu-map 
+                    .menu-map__container 
+                        .select-wrapper
+                            select.select__select(style="width: 100%") 
+                                each item in ['Москва', 'asd', 'zxc',3,4]
+                                    option(value=item) 
+                                        |#{item}
+                        .menu-map__items
+                            .menu-map__card(data-coords='[55.742148171704756, 37.625425900310255]')
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title RAILTO 
+                                            p.menu-map__address-text  г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") +375 29 617-09-73
+                                            a.menu-map__link(href="tel:+375173578726") +375 17 357-87-26
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                                    .day__column
+                                                        .day__row 
+                                                            p.day-day СБ                                                 
+                                                        .day__row 
+                                                            p.day-number 11-18
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                        .menu-map__placemark
+                                            .menu-map__placemark-row
+                                                +placemark-white-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Официальный дистрибьютор
+                                            .menu-map__placemark-row
+                                                +placemark-green-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Есть экспозиция
+                                            .menu-map__placemark-row
+                                                +placemark-grey-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Салон, где можно сделать заказ
+                                        .menu-map__types 
+                                            .menu-map__type 
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Салон
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Шоурум
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Магазин
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title Ideal Standard International 
+                                            p.menu-map__address-text  г. Москва, Нижняя Сыромятническая 10. Артплей строение 7 этаж 1
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") 8 (495) 640-09-20
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — факс
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — tg, wh, viber
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                .menu-map__item(data-item-bottom='') 
+                                    .menu-bottom 
+                                        h3.menu-bottom__title экспозиция
+                                        ul.menu-bottom__list 
+                                            each e in['Наименование товара здесь в одну или две троки в зависимости от букв','Наименование товара','Наименование товара здесь']
+                                                li.menu-bottom__item 
+                                                    a.menu__bottom__link=e
+                            .menu-map__card(data-coords='[55.76602264045195, 37.60817233101749]')
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title RAILTO 
+                                            p.menu-map__address-text  г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") +375 29 617-09-73
+                                            a.menu-map__link(href="tel:+375173578726") +375 17 357-87-26
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                                    .day__column
+                                                        .day__row 
+                                                            p.day-day СБ                                                 
+                                                        .day__row 
+                                                            p.day-number 11-18
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                        .menu-map__placemark
+                                            .menu-map__placemark-row
+                                                +placemark-white-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Официальный дистрибьютор
+                                            .menu-map__placemark-row
+                                                +placemark-green-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Есть экспозиция
+                                            .menu-map__placemark-row
+                                                +placemark-grey-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Салон, где можно сделать заказ
+                                        .menu-map__types 
+                                            .menu-map__type 
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Салон
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Шоурум
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Магазин
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title Ideal Standard International 
+                                            p.menu-map__address-text  г. Москва, Нижняя Сыромятническая 10. Артплей строение 7 этаж 1
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") 8 (495) 640-09-20
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — факс
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — tg, wh, viber
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                .menu-map__item(data-item-bottom='') 
+                                    .menu-bottom 
+                                        h3.menu-bottom__title экспозиция
+                                        ul.menu-bottom__list 
+                                            each e in['Наименование товара здесь в одну или две троки в зависимости от букв','Наименование товара','Наименование товара здесь']
+                                                li.menu-bottom__item 
+                                                    a.menu__bottom__link=e
+                            .menu-map__card(data-coords='[55.75229578774572, 37.661564400970285]')
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title RAILTO 
+                                            p.menu-map__address-text  г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") +375 29 617-09-73
+                                            a.menu-map__link(href="tel:+375173578726") +375 17 357-87-26
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                                    .day__column
+                                                        .day__row 
+                                                            p.day-day СБ                                                 
+                                                        .day__row 
+                                                            p.day-number 11-18
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                        .menu-map__placemark
+                                            .menu-map__placemark-row
+                                                +placemark-white-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Официальный дистрибьютор
+                                            .menu-map__placemark-row
+                                                +placemark-green-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Есть экспозиция
+                                            .menu-map__placemark-row
+                                                +placemark-grey-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Салон, где можно сделать заказ
+                                        .menu-map__types 
+                                            .menu-map__type 
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Салон
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Шоурум
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Магазин
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title Ideal Standard International 
+                                            p.menu-map__address-text  г. Москва, Нижняя Сыромятническая 10. Артплей строение 7 этаж 1
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") 8 (495) 640-09-20
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — факс
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — tg, wh, viber
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                .menu-map__item(data-item-bottom='') 
+                                    .menu-bottom 
+                                        h3.menu-bottom__title экспозиция
+                                        ul.menu-bottom__list 
+                                            each e in['Наименование товара здесь в одну или две троки в зависимости от букв','Наименование товара','Наименование товара здесь']
+                                                li.menu-bottom__item 
+                                                    a.menu__bottom__link=e
+                            .menu-map__card(data-coords='[55.780970965087114, 37.65713203486051]')
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title RAILTO 
+                                            p.menu-map__address-text  г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") +375 29 617-09-73
+                                            a.menu-map__link(href="tel:+375173578726") +375 17 357-87-26
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                                    .day__column
+                                                        .day__row 
+                                                            p.day-day СБ                                                 
+                                                        .day__row 
+                                                            p.day-number 11-18
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                        .menu-map__placemark
+                                            .menu-map__placemark-row
+                                                +placemark-white-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Официальный дистрибьютор
+                                            .menu-map__placemark-row
+                                                +placemark-green-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Есть экспозиция
+                                            .menu-map__placemark-row
+                                                +placemark-grey-svg.menu-map__placemark-svg
+                                                p.menu-map__placemark-text Салон, где можно сделать заказ
+                                        .menu-map__types 
+                                            .menu-map__type 
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Салон
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Шоурум
+                                            .menu-map__type
+                                                +check.menu-map__type-svg 
+                                                p.menu-map__type-text Магазин
+                                .menu-map__item
+                                    .menu-map__item-container
+                                        .menu-map__address
+                                            h2.menu-map__address-title Ideal Standard International 
+                                            p.menu-map__address-text  г. Москва, Нижняя Сыромятническая 10. Артплей строение 7 этаж 1
+                                        .menu-map__links
+                                            a.menu-map__link(href="tel:+375296170973") 8 (495) 640-09-20
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — факс
+                                            a.menu-map__link(href="tel:+375173578726") 8 (926) 640-01-91 — tg, wh, viber
+                                        .menu-map__day 
+                                            .menu-map__day-column 
+                                                .day
+                                                    .day__column 
+                                                        .day__row 
+                                                            p.day-day ПНД — ПТ                                                    
+                                                        .day__row 
+                                                            p.day-number 10–19
+                                            .menu-map__day-column 
+                                                    .binding
+                                                        +binding-svg.binding-svg 
+                                                        p.binding__text сайт
+                                .menu-map__item(data-item-bottom='') 
+                                    .menu-bottom 
+                                        h3.menu-bottom__title экспозиция
+                                        ul.menu-bottom__list 
+                                            each e in['Наименование товара здесь в одну или две троки в зависимости от букв','Наименование товара','Наименование товара здесь']
+                                                li.menu-bottom__item 
+                                                    a.menu__bottom__link=e
+                .map-container
+                    #map
+                    
+
+
+
+
+
 
 block scripts
     script(src="https://api-maps.yandex.ru/2.1/?apikey=7376ce96-80a1-4831-8268-2894a23cf5b4&lang=ru_RU" type="text/javascript")

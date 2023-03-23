@@ -1,0 +1,15 @@
+extends ../layouts/master
+
+block content
+    .menu-slt
+        .menu-slt__container.container 
+            .menu-slt__row
+                a.menu-slt__link-back Назад
+            .menu-slt__row
+                ul.menu-slt__list 
+                    each value in ['Местополождение','Категория продукции','Тип объекта']
+                        li.menu-slt__item(data-btn='')
+                            a.menu-slt__link=value
+                            +arrowDown-svg
+        .modal 
+            p ghghghghghghhg

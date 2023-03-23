@@ -9,6 +9,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import './js/map.js'
+
+
+
 const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
 const swiper = new Swiper(".swiper", {
   // configure Swiper to use modules
@@ -206,21 +210,3 @@ $(() => {
   })
 })
 
-// map
-{
-  var myMap;
-
-  // Дождёмся загрузки API и готовности DOM.
-  ymaps.ready(init);
-
-  function init () {
-      // Создание экземпляра карты и его привязка к контейнеру с
-      // заданным id ("map").
-      myMap = new ymaps.Map('map', {
-          // При инициализации карты обязательно нужно указать
-          // её центр и коэффициент масштабирования.
-          center:[55.76, 37.64], // Москва
-          zoom:10
-      });
-  }
-}
