@@ -99,21 +99,55 @@
 //             .add(clusterer)
 //     }
 // }
+//////////////////////
+// {
+//     const modal = document.querySelector('.modal')
+//     const li = document.querySelectorAll('.menu-slt__item')
 
-{
-    const modal = document.querySelector('.modal')
-    const li = document.querySelectorAll('.menu-slt__item')
+//     window.addEventListener('click', (e) => {
 
-    window.addEventListener('click', (e) => {
+//         if (!e.target.closest('[data-btn]')) return
+//         console.log('dfd')
+//     })
+//     // for (const e of li) {
+//     //     e.addEventListener('click', () => {
+//     //         console.log('d')
+//     //         modal.classList.add('modal-active')
+//     //     })
+//     // }
 
-        if (!e.target.closest('[data-btn]')) return
-        console.log('dfd')
+// }
+
+
+// {
+//     $(() => {
+
+//         const modal = document.querySelectorAll('[data-modal]')
+//         $(window).on('click', (e) => {
+//             if (e.target.closest('[data-btn-modal]')) {
+//                 console.log(e.target.closest('[data-btn-modal]').dataset.btnModal)
+
+//                 document.querySelector(`[data-modal='${e.target.closest('[data-btn-modal]').dataset.btnModal}']`).classList.add('modal-active');
+
+
+//             }
+
+
+//         })
+//     })
+// }
+
+
+$(() => {
+    $(window).on('click', (e) => {
+        let btn = e.target.closest('[data-btn]')
+
+        if (!btn) return
+
+        if (btn.dataset.btn === 'children') {
+            $(btn).children("ul").addClass('menu-slt__list-active')
+        } else {
+            $(btn).parent().removeClass('menu-slt__list-active')
+        }
     })
-    // for (const e of li) {
-    //     e.addEventListener('click', () => {
-    //         console.log('d')
-    //         modal.classList.add('modal-active')
-    //     })
-    // }
-
-}
+})

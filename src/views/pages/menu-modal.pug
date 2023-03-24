@@ -1,15 +1,63 @@
 extends ../layouts/master
 
 block content
-    .menu-slt
-        .menu-slt__container.container 
-            .menu-slt__row
-                a.menu-slt__link-back Назад
-            .menu-slt__row
-                ul.menu-slt__list 
-                    each value in ['Местополождение','Категория продукции','Тип объекта']
-                        li.menu-slt__item(data-btn='')
-                            a.menu-slt__link=value
-                            +arrowDown-svg
-        .modal 
-            p ghghghghghghhg
+    //- .menu-slt
+    //-     .menu-slt__container.container 
+    //-     .menu-slt__row.container
+    //-             ul.menu-slt__list.menu-slt__list-top
+    //-                 li.menu-slt__item(data-btn='children')
+    //-                     a.menu-slt__link выбрать дочерний 1                       
+    //-                     ul.menu-slt__list 
+    //-                         li.menu-slt__item(data-btn='back') 
+    //-                             a.menu-slt__link назад 2
+    //-                         li.menu-slt__item(data-btn='children') 
+    //-                             a.menu-slt__link пункт 2
+    //-                         li.menu-slt__item(data-btn='children')
+    //-                             a.menu-slt__link пункт 2
+    //-                         li.menu-slt__item(data-btn='children')
+    //-                             a.menu-slt__link пункт 2
+    //-                             ul.menu-slt__list 
+    //-                                 li.menu-slt__item(data-btn='back') 
+    //-                                     a.menu-slt__link назад 3
+    //-                                 li.menu-slt__item(data-btn='children') 
+    //-                                     a.menu-slt__link пункт 3
+    //-                                 li.menu-slt__item(data-btn='children') 
+    //-                                     a.menu-slt__link пункт 3
+    //-                                 li.menu-slt__item(data-btn='children')
+    //-                                     a.menu-slt__link пункт 3
+    
+    
+    
+    
+    
+    
+    
+    
+    //- .geo
+    //-     .geo-row
+    //-         form.geo-form(action="#") 
+    //-             label Питер 
+    //-                 input(type="checkbox" value='Питер') 
+    //-             label Нижний Н
+    //-                 input(type="checkbox" value='Нижнний')
+    //-             label Химки
+    //-                 input(type="checkbox" value='Химки')
+    //-             label Краснодар
+    //-                 input(type="checkbox" value='Краснодар')
+    //-             button(type='submit' data-btn='submit')  Применить
+    //-             button(data-btn='reset').geo-form__uninstall Удалить
+    //-     .geo-row
+    //-         .geo__items 
+    .calculate 
+        .counter(data-counter='mens')
+            button(data-btn ='increment') +
+            input(value=0)
+            button(data-btn ='decrement') -
+        .counter(data-counter='mens')
+            button(data-btn ='increment') +
+            input(value=0)
+            button(data-btn ='decrement') -
+        .counter(data-counter='valid')
+            button(data-btn ='increment') +
+            input(value=0)
+            button(data-btn ='decrement') -

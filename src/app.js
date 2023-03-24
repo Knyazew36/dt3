@@ -10,8 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import './js/map.js'
-
-
+import './js/geo'
+import './js/counter'
 
 const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
 const swiper = new Swiper(".swiper", {
