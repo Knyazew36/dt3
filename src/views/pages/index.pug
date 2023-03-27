@@ -27,7 +27,7 @@ block content
   //- +about-page__slider
   //- button.question__btn(data-fancy-btn='') Отправить
   //- button.question__btn(data-fancybox='') Отправить
-  +question
+  //- +question
 
   //- +accordeon
 
@@ -40,5 +40,15 @@ block content
   //-       each item in ['qwe', 'asd', 'zxc',3,4]
   //-         option(value=item) 
   //-           |#{item}
-
-  
+  section.main-slider 
+    .swiper 
+      .swiper__wrapper 
+        .swiper__slide
+          .swiper__title Новое летнее меню <br/>в ресторане <br/>Fish Box
+          +picture('main-slide-1.jpg').swiper-img
+        .swiper__slide
+          .swiper__title Вегетарианское меню <br/>в ресторане <br/>Zafferano Estate
+          +picture('main-slide-2.jpg').swiper-img
+        .swiper__slide clfqlkjkjlkllj
+      .swiper__scrollbar
+ 
