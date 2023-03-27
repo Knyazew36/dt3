@@ -1,0 +1,22 @@
+.map {
+    &__column {
+        display: flex;
+        height: rem(745px);
+    }
+
+}
+
+#map {
+    width: calc(#{$col-part-d}*9 - #{$col-gap});
+    height: 100%;
+}
+
+.menu-map__card {
+    background: #F0F0F0;
+    border: 1px solid #CACACA;
+    margin-bottom: rem(10px);
+}
+
+.card-active{
+    background-color: red;
+}

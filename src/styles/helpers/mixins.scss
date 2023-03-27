@@ -43,6 +43,38 @@
   }
 }
 
+
+// стилизация скроллбара
+@mixin styled-scrollbar($scrollbar-bg: #DDDDDD, $scrollbar-width: 6px) {
+  scrollbar-track-color: $scrollbar-bg;
+  scrollbar-darkshadow-color: $scrollbar-bg;
+  scrollbar-3dlight-color: $scrollbar-bg;
+
+  scrollbar-arrow-color: #02343B;
+
+  scrollbar-highlight-color: #02343B;
+  scrollbar-shadow-color: #02343B;
+  scrollbar-face-color: #02343B;
+
+  // firefox
+  scrollbar-width: thin;
+  scrollbar-color: #02343B $scrollbar-bg;
+
+  // chrome, edge, opera, safari
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // margin: 4px 0;
+    background-color: #02343B;
+  }
+}
+
 @mixin cover() {
   position: absolute;
   top: 0;

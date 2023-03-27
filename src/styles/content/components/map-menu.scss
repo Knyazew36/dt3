@@ -1,0 +1,264 @@
+.menu-map {
+  width: rem(373px);
+  height: rem(747px);
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: rem(12px);
+    background-color: white;
+    align-items: center;
+
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    height: rem(632px);
+    overflow: hidden;
+    overflow-y: scroll;
+    @include styled-scrollbar;
+    position: relative
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__item {
+
+    padding: rem(20px) rem(24px);
+
+    &:nth-child(1) {
+      color: #02343B;
+    }
+
+    &:nth-child(2) {
+      background-color: #CACACA;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(12px);
+
+      &>div {
+        width: 100%;
+      }
+    }
+  }
+
+  &__address {
+    display: block;
+    width: 100%;
+
+    &-title {
+      font-weight: 500;
+      font-size: rem(18px);
+      line-height: 120%;
+      margin-bottom: rem(4px);
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: rem(16px);
+      line-height: 150%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+
+  }
+
+  &__link a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02343B;
+  }
+
+  &__day {
+    display: flex;
+    justify-content: space-between;
+
+    &-column {
+      display: flex;
+      padding-right: rem(28px);
+
+    }
+  }
+
+
+  &__placemark {
+    display: block;
+
+    &-row {
+      display: flex;
+      align-items: center;
+    }
+
+    &-svg {
+      width: rem(16px);
+      height: rem(16px);
+      margin-right: rem(8.27px);
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(16px);
+      line-height: 150%;
+    }
+  }
+
+  &__types {
+    display: block;
+    border-top: 1px solid #CACACA;
+    padding-top: rem(12px);
+  }
+
+  &__type {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(9px);
+
+    &-svg {
+      width: rem(10.55px);
+      height: rem(7.82px);
+
+      margin-right: rem(6.45px);
+
+      & path {
+        stroke: #A66731;
+
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: rem(16px);
+      line-height: 130%;
+    }
+  }
+
+}
+
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #02343B;
+
+  gap: rem(20px);
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__day {
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 150%;
+  }
+
+  &__number {
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: 150%;
+  }
+
+}
+
+.binding {
+  display: flex;
+  align-items: center;
+
+  font-size: rem(14px);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+
+.menu-bottom {
+  display: none;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(12px);
+    line-height: 120%;
+    color: #02343B;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6px);
+  }
+
+  &__item a {
+    // display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(12px);
+    line-height: 130%;
+    // text-decoration-line: underline;
+    color: #02343B;
+
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid black;
+      bottom: 0;
+      left: 0;
+    }
+
+  }
+}
+
+.balloon {
+  // width: 500px;
+  // height: 500px;
+
+  // background-color: black;
+}
+
+.cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(38px);
+  height: rem(38px);
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: rem(16px);
+  line-height: 70%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DCDCDC;
+  background: black;
+
+}
